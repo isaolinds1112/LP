@@ -1,0 +1,285 @@
+1. Exercício 1
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}
+2. Exercício 2
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        
+        int a = s.nextInt();
+        int b = s.nextInt();
+        
+        int x = a + b;
+        
+        System.out.println("X = " + x);
+        
+        s.close();
+    }
+}
+3. Exercício 3
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        
+        int a = s.nextInt();
+        int b = s.nextInt();
+        
+        int soma = a + b;
+        
+        System.out.println("SOMA = " + soma);
+        
+        s.close();
+    }
+}
+
+4. Exercício 4
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        
+        double notaA = leitor.nextDouble();
+        double notaB = leitor.nextDouble();
+        
+        double somaPesos = (notaA * 3.5) + (notaB * 7.5);
+        double mediaAluno = somaPesos / 11.0;
+        
+        System.out.printf("MEDIA = %.5f\n", mediaAluno);
+        
+        leitor.close();
+    }
+}
+
+5. Exercício 5
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        
+        double primeiraNota = leitor.nextDouble();
+        double segundaNota = leitor.nextDouble();
+        double terceiraNota = leitor.nextDouble();
+        
+        double totalPonderado = (primeiraNota * 2) + (segundaNota * 3) + (terceiraNota * 5);
+        double mediaAluno = totalPonderado / 10.0;
+        
+        System.out.printf("MEDIA = %.1f\n", mediaAluno);
+        
+        leitor.close();
+    }
+}
+
+6. Exercício 6
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        int a = input.nextInt();
+        int b = input.nextInt();
+        int c = input.nextInt();
+        int d = input.nextInt();
+        
+        int dif = (a * b - c * d);
+        
+        System.out.printf("DIFERENCA = %d\n", dif);
+        
+        input.close();
+    }
+}
+
+7. Exercício 7
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        int n = input.nextInt();
+        int h = input.nextInt();
+        double v = input.nextDouble();
+        
+        double t = h * v;
+        
+        System.out.printf("NUMBER = %d\n", n);
+        System.out.printf("SALARY = U$ %.2f\n", t);
+        
+        input.close();
+    }
+}
+
+8. Exercício 8
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        int p1 = input.nextInt();
+        int np1 = input.nextInt();
+        double v1 = input.nextDouble();
+        
+        int p2 = input.nextInt();
+        int np2 = input.nextInt();
+        double v2 = input.nextDouble();
+        
+        double vf = (v1 * np1) + (v2 * np2);
+        
+        System.out.printf("VALOR A PAGAR: R$ %.2f\n", vf);
+        
+        input.close();
+    }
+}
+
+9. Exercício 9
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        int A = input.nextInt();
+        int B = input.nextInt();
+        int C = input.nextInt();
+        int D = input.nextInt();
+        
+        if (B > C && D > A && C + D > A + B && C > 0 && D > 0 && A % 2 == 0) {
+            System.out.println("Valores aceitos");
+        } else {
+            System.out.println("Valores nao aceitos");
+        }
+        
+        input.close();
+    }
+}
+
+10. Exercício 10
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        int c = input.nextInt();
+        int q = input.nextInt();
+        
+        System.out.print("Total: R$ ");
+        
+        switch(c) {
+            case 1:
+                System.out.printf("%.2f", 4.0 * q);
+                break;
+            case 2:
+                System.out.printf("%.2f", 4.5 * q);
+                break;
+            case 3:
+                System.out.printf("%.2f", 5.0 * q);
+                break;
+            case 4:
+                System.out.printf("%.2f", 2.0 * q);
+                break;
+            case 5:
+                System.out.printf("%.2f", 1.5 * q);
+                break;
+            default:
+                break;
+        }
+        
+        System.out.println();
+        
+        input.close();
+    }
+}
+
+11. Exercício 11
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        int num1 = input.nextInt();
+        int num2 = input.nextInt();
+        int num3 = input.nextInt();
+        
+        int cont1 = num1;
+        int cont2 = num2;
+        int cont3 = num3;
+        int comp;
+        
+        if (cont1 < cont2) {
+            comp = cont1;
+            cont1 = cont2;
+            cont2 = comp;
+        }
+        
+        if (cont2 < cont3) {
+            comp = cont2;
+            cont2 = cont3;
+            cont3 = comp;
+        }
+        
+        if (cont1 < cont2) {
+            comp = cont1;
+            cont1 = cont2;
+            cont2 = comp;
+        }
+        
+        System.out.printf("%d\n%d\n%d\n\n%d\n%d\n%d\n", cont3, cont2, cont1, num1, num2, num3);
+        
+        input.close();
+    }
+}
+
+12. Exercício 12
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        int monthNumber = input.nextInt();
+        String monthName = "";
+
+        if (monthNumber == 1) {
+            monthName = "January";
+        } else if (monthNumber == 2) {
+            monthName = "February";
+        } else if (monthNumber == 3) {
+            monthName = "March";
+        } else if (monthNumber == 4) {
+            monthName = "April";
+        } else if (monthNumber == 5) {
+            monthName = "May";
+        } else if (monthNumber == 6) {
+            monthName = "June";
+        } else if (monthNumber == 7) {
+            monthName = "July";
+        } else if (monthNumber == 8) {
+            monthName = "August";
+        } else if (monthNumber == 9) {
+            monthName = "September";
+        } else if (monthNumber == 10) {
+            monthName = "October";
+        } else if (monthNumber == 11) {
+            monthName = "November";
+        } else if (monthNumber == 12) {
+            monthName = "December";
+        }
+
+        System.out.println(monthName);
+        
+        input.close();
+    }
+}
+
