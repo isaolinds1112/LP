@@ -1,4 +1,4 @@
-package br.cefet.inf;
+package br.cefetmg.rdc;
 
 import java.util.Scanner;
 
